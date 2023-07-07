@@ -88,6 +88,7 @@ h6 {
   display: flex;
   position: relative;
   min-height: 100vh;
+  transition: 1s ease;
 }
 
 .color__desc {
