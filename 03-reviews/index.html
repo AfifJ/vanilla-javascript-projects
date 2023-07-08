@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03 - Reviews</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      .review__card {
+        margin: 0 auto;
+        max-width: 16rem;
+      }
+      .review__btn {
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reviews</h1>
+    <hr />
+    <div class="review__card">
+      <button class="review__btn review-random">Random</button>
+      <div>
+        <br />
+        <button class="review__btn review-prev">&#60;</button>
+        <button class="review__btn review-next">&#62;</button>
+      </div>
+      <h2 class="review__username"></h2>
+      <h4 class="review__prof"></h4>
+      <p class="review__text"></p>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

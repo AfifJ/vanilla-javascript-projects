@@ -28,7 +28,7 @@
       /* youtube reference with some my version */
       const countValue = document.getElementById("number-value");
       const numButtons = [...document.getElementsByClassName("number")];
-      
+
       numButtons.forEach((numButton) => {
         numButton.addEventListener("click", (e) => {
           const btnClicked = e.target.classList;
@@ -36,7 +36,13 @@
             ? countValue.textContent--
             : btnClicked.contains("number-increase")
             ? countValue.textContent++
-            : countValue.textContent = 0;
+            : (countValue.textContent = 0);
+
+          countValue.textContent > 0
+            ? (countValue.style.color = "green")
+            : countValue.textContent < 0
+            ? (countValue.style.color = "orange")
+            : (countValue.style.color = "black");
         });
       });
 
