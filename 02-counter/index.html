@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02 - Counter</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      button {
+        cursor: pointer;
+      }
+      .number {
+        padding: 1rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <h2 id="number-value">0</h2>
+    <div>
+      <button class="number number-decrease">-</button>
+      <button class="number number-reset">Reset</button>
+      <button class="number number-increase">+</button>
+    </div>
+    <script>
+      /* youtube reference with some my version */
+      const countValue = document.getElementById("number-value");
+      const numButtons = [...document.getElementsByClassName("number")];
+      
+      numButtons.forEach((numButton) => {
+        numButton.addEventListener("click", (e) => {
+          const btnClicked = e.target.classList;
+          btnClicked.contains("number-decrease")
+            ? countValue.textContent--
+            : btnClicked.contains("number-increase")
+            ? countValue.textContent++
+            : countValue.textContent = 0;
+        });
+      });
+
+      /*
+      // my solution:
+
+      const decreaseBtn = document.getElementById('number-decrease');
+      const increaseBtn = document.getElementById('number-increase');
+      const resetBtn = document.getElementById('number-reset');
+      let count = 0;
+
+      const numberValue = document.getElementById('number-value');
+
+      decreaseBtn.addEventListener('click', () => {
+        count--;
+        numberValue.innerText = count;
+      })
+      increaseBtn.addEventListener('click', () => {
+        count++;
+        numberValue.innerText = count;
+      })
+      resetBtn.addEventListener('click', () => {
+        count = 0;
+        numberValue.innerText = count;
+      })
+       */
+    </script>
+  </body>
+</html>
