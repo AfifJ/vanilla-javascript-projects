@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 - Navbar</title>
+  <style>
+/*     * {
+      border: 1px gray solid;
+    } */
+    .nav-btn {
+      z-index: 2;
+      transition: all .5s ease;
+      height: 3rem;
+    }
+    .nav-btn:hover {
+      font-size: larger;
+    }
+    .nav-content {
+      height: 0;
+      overflow: hidden;
+      transition: linear .5s all;
+      border-bottom: 1px solid black;
+    }
+    .show {
+      height: 4rem;
+    }
+    .opened {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+
+  <button class="nav-btn">
+    Nav
+  </button>
+
+  <ul class="nav-content">
+    <li>home</li>
+    <li>about</li>
+    <li>contact</li>
+  </ul>
+  
+  <script src="main.js"></script>
+</body>
+</html>
